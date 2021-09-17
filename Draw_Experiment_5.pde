@@ -1,7 +1,7 @@
 PImage bg;
-color r = (255); //Set Point and Brush Colour Parameters
-color g = (3);
-color b = (3);
+color r = (50); //Set Point and Brush Colour Parameters
+color g = (191);
+color b = (67);
     
 void setup ()
 {

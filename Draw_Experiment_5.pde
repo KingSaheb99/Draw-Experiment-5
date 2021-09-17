@@ -1,5 +1,5 @@
 PImage bg;
-
+    
 void setup ()
 {
   size(567, 794, P2D);
@@ -23,20 +23,17 @@ void setup ()
 
 void draw () 
 {
-  if((mouseX >= 59) && (mouseY >= 661))
-  {
-    ellipse(0, 0, 50, 50);
-  }
-  else if((mouseX <59) && (mouseY < 661))
-  {
-    
-  }
   if(mousePressed) // Drag to draw
   {
-  ellipse(mouseX - 5, mouseY - 5, 9, 9);
-  
-  print(mouseX);    //Tells me Coordinate of point when I click on it
-  print(mouseY);
+    ellipse(mouseX - 5, mouseY -5, 9, 9);
+    
+    print(mouseX - 5);    //Tells me Coordinate of point when I click on it
+    print(mouseY -5);
+    
+    if((mouseX - 5 > 54) && (mouseX - 5 < 64) && (mouseY -5 > 656) && (mouseY -5 < 666)) // Creates new point
+    {
+      ellipse(0, 0, 50, 50);
+    }
   }
 }
 

@@ -5,9 +5,11 @@ color b = (67);
     
 void setup ()
 {
+  
   size(567, 795, P2D);
   bg = loadImage("GatorColor.png"); //https://coloringhome.com/coloring-page/1681976
   background(bg);
+  
   
   
   PImage Cursor = loadImage("Cursor.png"); //Custom Cursor - https://discourse.processing.org/t/custom-mouse-cursor/21549/2

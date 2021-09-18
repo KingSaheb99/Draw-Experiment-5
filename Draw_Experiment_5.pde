@@ -24,7 +24,7 @@ void setup ()
   
   bgm = new SoundFile(this, "bgm.mp3"); //Loads soundfile
   bgm.loop(); //Loops song on end
-  bgm.amp(0.75);
+  bgm.amp(0.75); //Lowers volume to 75% of max
 }
 
 void draw () 
@@ -40,7 +40,7 @@ void draw ()
     print(mouseX - 5); //Tells me Coordinate of point when I click on it
     print(mouseY -5);
   */   
-    if((mouseX - 5 > 54) && (mouseX - 5 < 64) && (mouseY -5 > 656) && (mouseY -5 < 666)) // Creates new point
+    if((mouseX - 5 > 54) && (mouseX - 5 < 64) && (mouseY -5 > 656) && (mouseY -5 < 666)) // Creates new point - https://processing.org/tutorials/interactivity
     {
       fill(r, g, b); //(Point 2)
       ellipse(34, 587, 9, 9);

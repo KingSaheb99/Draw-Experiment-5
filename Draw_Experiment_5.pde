@@ -2,15 +2,15 @@ PImage bg;
 color r = (50); //Set Point and Brush Colour Parameters
 color g = (191);
 color b = (67);
-    
-void setup ()
+float Opacity = (0);
+   
+public void setup ()
 {
-  
   size(567, 795, P2D);
   bg = loadImage("GatorColor.png"); //https://coloringhome.com/coloring-page/1681976
-  background(bg);
-  
-  
+  //background(255, 255, 255);
+  tint(255, 0);
+  image(bg, 0, 0);
   
   PImage Cursor = loadImage("Cursor.png"); //Custom Cursor - https://discourse.processing.org/t/custom-mouse-cursor/21549/2
   Cursor.resize(16, 16);
@@ -19,23 +19,20 @@ void setup ()
   fill(r, g, b); //Initial Point (Point 1)
   stroke(0, 0);
   ellipse(59, 661, 9, 9);
-  
-  
-  
-  
- 
 }
 
-void draw () 
+public void draw () 
 {
   if(mousePressed) // Drag to draw
   {
     fill(r, g, b);
     ellipse(mouseX - 5, mouseY -5, 9, 9); //Drawing Brush
+    
   /*  
     print(mouseX - 5); //Tells me Coordinate of point when I click on it
     print(mouseY -5);
   */   
+  
     if((mouseX - 5 > 54) && (mouseX - 5 < 64) && (mouseY -5 > 656) && (mouseY -5 < 666)) // Creates new point
     {
       fill(r, g, b); //(Point 2)
@@ -280,6 +277,12 @@ void draw ()
     {
       fill(r, g, b); //(Point 50)
       ellipse(189, 673, 9, 9);
+    }
+    if((mouseX - 5 > 184) && (mouseX - 5 < 194) && (mouseY -5 > 668) && (mouseY -5 < 678)) 
+    {
+     tint(255,255);
+    
+     print("Completed");
     }
   }
 }

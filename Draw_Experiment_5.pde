@@ -5,8 +5,8 @@ color b = (67);
     
 void setup ()
 {
-  size(567, 794, P2D);
-  bg = loadImage("GatorOriginal.jpg"); //https://coloringhome.com/coloring-page/1681976
+  size(567, 795, P2D);
+  bg = loadImage("GatorColor.png"); //https://coloringhome.com/coloring-page/1681976
   background(bg);
   
   

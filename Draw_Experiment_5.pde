@@ -18,8 +18,9 @@ void setup ()
   cursor(Cursor);
   
   fill(r, g, b); //Initial Point (Point 1)
-  stroke(0, 0);
-  ellipse(59, 661, 9, 9);
+  stroke(34, 130, 46);
+  strokeWeight(5);
+  ellipse(59, 661, 10, 10);
   
   bgm = new SoundFile(this, "bgm.mp3"); //Loads soundfile
   bgm.loop(); //Loops song on end
@@ -28,6 +29,9 @@ void setup ()
 
 void draw () 
 {
+  stroke(0, 0);
+  strokeWeight(0);
+  
   if(mousePressed) // Drag to draw
   {
     fill(r, g, b);
@@ -281,12 +285,16 @@ void draw ()
       fill(r, g, b); //(Point 50)
       ellipse(189, 673, 9, 9);
     }
-    if((mouseX - 5 > 184) && (mouseX - 5 < 194) && (mouseY -5 > 668) && (mouseY -5 < 678)) 
-    {
-      waow = new SoundFile(this, "waow.mp3");
-      waow.play();
-      waow.amp(0.1);
-    }
+  }
+}
+
+void mouseReleased() 
+{
+  if((mouseX - 5 > 184) && (mouseX - 5 < 194) && (mouseY -5 > 668) && (mouseY -5 < 678))
+  {
+    waow = new SoundFile(this, "waow.mp3");
+    waow.play();
+    waow.amp(0.5);
   }
 }
 

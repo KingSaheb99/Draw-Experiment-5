@@ -56,21 +56,21 @@ void draw ()
     {
       fill(r, g, b); //(Point 3)
       stroke(0, 0);
-  strokeWeight(0);
+      strokeWeight(0);
       ellipse(89, 547, 9, 9);
     }
     if((mouseX - 5 > 84) && (mouseX - 5 < 94) && (mouseY -5 > 542) && (mouseY -5 < 552)) 
     {
       fill(r, g, b); //(Point 4)
       stroke(0, 0);
-  strokeWeight(0);
+      strokeWeight(0);
       ellipse(85, 465, 9, 9);
     }
     if((mouseX - 5 > 80) && (mouseX - 5 < 90) && (mouseY -5 > 460) && (mouseY -5 < 470)) 
     {
       fill(r, g, b); //(Point 5)
       stroke(0, 0);
-  strokeWeight(0);
+      strokeWeight(0);
       ellipse(123, 395, 9, 9);
     }
     if((mouseX - 5 > 118) && (mouseX - 5 < 128) && (mouseY -5 > 390) && (mouseY -5 < 400)) 

@@ -7,10 +7,10 @@ float Opacity = (0);
 public void setup ()
 {
   size(567, 795, P2D);
-  bg = loadImage("GatorColor.png"); //https://coloringhome.com/coloring-page/1681976
+  //bg = loadImage("GatorColor.png"); //https://coloringhome.com/coloring-page/1681976
   //background(255, 255, 255);
-  tint(255, 0);
-  image(bg, 0, 0);
+  //tint(255, 0);
+  //image(bg, 0, 0);
   
   PImage Cursor = loadImage("Cursor.png"); //Custom Cursor - https://discourse.processing.org/t/custom-mouse-cursor/21549/2
   Cursor.resize(16, 16);
@@ -23,6 +23,14 @@ public void setup ()
 
 public void draw () 
 {
+  bg = loadImage("GatorColor.png"); //https://coloringhome.com/coloring-page/1681976
+  //background(255, 255, 255);
+  //tint(255, 0);
+  image(bg, 0, 0);
+  
+  
+  
+  
   if(mousePressed) // Drag to draw
   {
     fill(r, g, b);

@@ -2,15 +2,16 @@ PImage bg;
 color r = (50); //Set Point and Brush Colour Parameters
 color g = (191);
 color b = (67);
+
+import processing.sound.*; //Initializes sound library
+SoundFile bgm; //Names soundfile
+SoundFile waow;
     
 void setup ()
 {
-  
   size(567, 795, P2D);
   bg = loadImage("GatorColor.png"); //https://coloringhome.com/coloring-page/1681976
   background(bg);
-  
-  
   
   PImage Cursor = loadImage("Cursor.png"); //Custom Cursor - https://discourse.processing.org/t/custom-mouse-cursor/21549/2
   Cursor.resize(16, 16);
@@ -20,10 +21,9 @@ void setup ()
   stroke(0, 0);
   ellipse(59, 661, 9, 9);
   
-  
-  
-  
- 
+  bgm = new SoundFile(this, "bgm.mp3"); //Loads soundfile
+  bgm.loop(); //Loops song on end
+  bgm.amp(0.75);
 }
 
 void draw () 
@@ -280,6 +280,12 @@ void draw ()
     {
       fill(r, g, b); //(Point 50)
       ellipse(189, 673, 9, 9);
+    }
+    if((mouseX - 5 > 184) && (mouseX - 5 < 194) && (mouseY -5 > 668) && (mouseY -5 < 678)) 
+    {
+      waow = new SoundFile(this, "waow.mp3");
+      waow.play();
+      waow.amp(0.1);
     }
   }
 }
